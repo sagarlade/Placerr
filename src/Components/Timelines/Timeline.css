@@ -1,0 +1,233 @@
+/* Add this to your existing CSS */
+
+@import url("https://fonts.googleapis.com/css?family=Amaranth|Source+Sans+Pro&display=swap");
+
+.main {
+  padding: 2em 0;
+}
+.item-img {
+  width: 100%;
+  height: 70vh;
+}
+.maintime {
+  text-align: center;
+}
+
+.main h1 {
+  color: #ffffff;
+  font-family: "Amaranth", sans-serif;
+  line-height: 1em;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.main button {
+  color: #fbfcfc;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: transparent;
+}
+.main button:hover {
+  border-image: linear-gradient(45deg, #f3ec78, #af4261) 1;
+  transition: border-color 0.3s ease-out;
+}
+.main h3 {
+  color: #000000;
+  font-family: "Amaranth", sans-serif;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.main p {
+  color: #000000;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.4em;
+  padding-top: 1.5rem;
+}
+
+.main .timeline {
+  position: relative;
+  overflow: hidden;
+}
+
+.main .timeline:before {
+  background: #f1efef;
+  content: "";
+  position: absolute;
+  left: 16%;
+  transform: translateX(50%);
+  width: 4px;
+  height: 94%;
+}
+
+.main .timeline .timeline-item {
+  clear: both;
+  list-style-type: none;
+  padding: 0 30px;
+  position: relative;
+}
+
+.main .timeline .timeline-item:before {
+  background: #f8f9fa;
+  border-radius: 50%;
+  content: "";
+  height: 20px;
+  left: 15%;
+  position: absolute;
+  transform: translateX(-90%);
+  width: 20px;
+}
+
+.main .timeline .timeline-item .timeline-content {
+  background: #f8f9fa;
+  padding: 1em;
+  width: 70%;
+  height: 100vh;
+  border-radius: 13px;
+  margin-bottom: 5rem;
+  margin-right: 4rem;
+}
+
+.main .timeline .timeline-item .timeline-content h3,
+.main .timeline .timeline-item .timeline-content p,
+.main .timeline .timeline-item .timeline-content button {
+  margin: 20px;
+}
+
+.main .timeline .timeline-item .timeline-content {
+  float: inline-end;
+}
+
+.main .timeline button {
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  color: #656565;
+  font-weight: 500;
+  padding: 10px;
+  transition: all 0.3s;
+}
+
+.main .timeline button:hover {
+  background: #ffffff;
+  border: 2px solid #656565;
+}
+/* Animation for left and right sliding */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Initially hide items */
+.timeline-item {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Slide in animation */
+.timeline-item.slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.timeline-item.slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+@media screen and (max-width: 968px) {
+  .main .timeline {
+    margin: 0 0 0 10px;
+  }
+
+  .main .timeline:before {
+    left: 6px;
+  }
+
+  .main .timeline .timeline-item:before {
+    left: -13px;
+  }
+
+  .main .timeline .timeline-item .timeline-content {
+    margin: 0 0 2em 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main .timeline {
+    margin: 0 0 0 10px;
+  }
+  .main .timeline:before {
+    left: 5px;
+  }
+
+  .main .timeline .timeline-item:before {
+    left: -14px;
+  }
+
+  .main .timeline .timeline-item .timeline-content {
+    height: auto;
+    width: 100%;
+  }
+  .item-img {
+    height: auto;
+  }
+  .main .timeline .timeline-item {
+    padding: 0 13px;
+  }
+}
+@media screen and (max-width: 468px) {
+  .main .timeline {
+    margin: 0 0 0 10px;
+  }
+  .timeline:before {
+    height: 50vh;
+  }
+  .main .timeline:before {
+    left: 5px;
+  }
+
+  .main .timeline .timeline-item:before {
+    left: -14px;
+  }
+  .main .timeline .timeline-item .timeline-content {
+    height: auto;
+    width: 100%;
+  }
+  .item-img {
+    height: auto;
+  }
+  .main .timeline .timeline-item {
+    padding: 0 13px;
+  }
+  .main .timeline .timeline-item .timeline-content h3{
+    font-size: 18px;
+  }
+  .main .timeline .timeline-item .timeline-content p{
+    font-size: 14px;
+  }
+  .main .timeline .timeline-item .timeline-content h3,
+  .main .timeline .timeline-item .timeline-content p{
+    margin: 3px;
+  }
+}

@@ -1,0 +1,222 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+.brand_cr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: auto;
+  height: 100%;
+  padding: 20px;
+  color: #fff;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Main Container with Animation */
+.bric_cr {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.bric_cr h2 {
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 1s ease-out forwards 0.5s;
+}
+
+/* Icons Container */
+.brc_icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease-out forwards 0.8s;
+}
+
+/* Individual Icons */
+.brc_icon img {
+  padding: 10px;
+  border: 1px solid gray;
+  background: rgba(90, 88, 88, 0.356);
+  border-radius: 15px;
+  width: 100px;
+  height: 90px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 1s ease-out forwards 1s;
+}
+
+/* Hover Effect */
+.brc_icon img:hover {
+  transform: scale(1.1);
+}
+
+/* Fade-in Effect */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-in Left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide-in Right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bric_cr {
+    max-width: 100%;
+    padding: 15px;
+    animation: fadeInUp 1s ease-out forwards 0.5s;
+  }
+
+  .bric_cr h2 {
+    font-size: 2rem;
+    width: 90%;
+    margin: auto;
+    animation: slideInLeft 1s ease-out forwards 0.5s;
+  }
+
+  .brc_icon img {
+    width: 70px;
+    height: 70px;
+    animation: fadeInUp 1s ease-out forwards 1s;
+  }
+}
+
+@media (max-width: 480px) {
+  .bric_cr h2 {
+    font-size: 1.5rem;
+  }
+
+  .bric_cr {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .brc_icon img {
+    width: 65px;
+    height: 65px;
+    animation: fadeInUp 1s ease-out forwards 1.2s;
+  }
+}
+
+/* Logo Sliders */
+
+.wrapper {
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 300px;
+  margin-top: 6rem;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+
+.item {
+  width: 280px;
+  height: 180px;
+  background-color: #fff;
+  border-radius: 6px;
+  position: absolute;
+  left: max(calc(280px * 8), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.item1 {
+  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.item2 {
+  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.item3 {
+  animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.item4 {
+  animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.item5 {
+  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.item6 {
+  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.item7 {
+  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.item8 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+.item img {
+  width: 90%;
+  height: 100px;
+  margin: 2.5rem auto;
+  align-items: center;
+  justify-items: center;
+  display: block;
+  object-fit: contain;
+}

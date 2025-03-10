@@ -1,0 +1,139 @@
+
+.newss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: #f8f9fa;
+  height: 40vh;
+  overflow: hidden;
+}
+
+.newsletter {
+  max-width: 1100px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  /* Animation Effect */
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+/* Slide-in Left for Heading */
+.left_side-de {
+  flex: 1;
+  text-align: left;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 1s ease-out forwards 0.5s;
+}
+
+/* Slide-in Right for Button */
+.right_side-de {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 1s ease-out forwards 0.8s;
+}
+
+/* Button Styling */
+.btngets {
+  background: #007bff;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btngets:hover {
+  background: #5ed9e7;
+}
+
+/* Fade-in Effect */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-in Left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide-in Right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .newsletter {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .left_side-de {
+    text-align: center;
+    margin-bottom: 15px;
+    animation: slideInUp 1s ease-out forwards 0.5s;
+  }
+
+  .left-heading {
+    font-size: 24px;
+  }
+
+  .right_side-de {
+    justify-content: center;
+    animation: slideInUp 1s ease-out forwards 0.8s;
+  }
+
+  .btngets {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+/* Slide-in Up for Small Screens */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

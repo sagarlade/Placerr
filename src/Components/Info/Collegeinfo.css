@@ -1,0 +1,179 @@
+/* General Styles */
+
+.subget {
+  padding: 50px 50px;
+  border-radius: 10px;
+  margin: auto;
+  background-color: #f8f9fa;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Left Section */
+.leftpart {
+  padding: 20px;
+}
+
+.collegeh1 {
+  margin-bottom: 2.4rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #084839;
+}
+
+.clst {
+  color: #ff5733;
+}
+
+.subinfo {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 10px;
+  margin-bottom: 2rem;
+}
+
+.infobtn {
+  background-color: #ff5733;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.infobtn:hover {
+  background-color: #d94328;
+}
+
+/* Right Section */
+.rightpart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.rs_1s {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.rs_1d {
+  text-align: center;
+}
+
+.rs_1f {
+  font-size: 1.5rem;
+  color: #084839;
+  font-weight: bold;
+}
+
+.rs_2g {
+  font-size: 1rem;
+  color: #555;
+}
+
+hr {
+  border: 0.5px solid #ccc;
+  margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .leftpart,
+  .rightpart {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .collegeh1 {
+    font-size: 2rem;
+  }
+
+  .subinfo {
+    font-size: 1.1rem;
+  }
+
+  .infobtn {
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+
+  .rs_1s {
+    padding: 15px;
+  }
+
+  .rs_1f {
+    font-size: 1.3rem;
+  }
+
+  .rs_2g {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .collegeh1 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .subinfo {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .infobtn {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+
+  .rs_1f {
+    font-size: 1.2rem;
+  }
+
+  .rs_2g {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .collegeh1 {
+    font-size: 1.5rem;
+  }
+
+  .subinfo {
+    font-size: 0.95rem;
+  }
+
+  .infobtn {
+    font-size: 0.9rem;
+    padding: 7px 12px;
+  }
+
+  .rs_1s {
+    padding: 10px;
+  }
+
+  .rs_1f {
+    font-size: 1.1rem;
+  }
+
+  .rs_2g {
+    font-size: 0.8rem;
+  }
+}

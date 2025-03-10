@@ -1,0 +1,155 @@
+/* CARD Section Styles */
+
+/* Responsive row */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Card Wrapper */
+.cardWrapper {
+  flex: 1 1 300px;
+  max-width: 350px;
+  color: #000;
+}
+
+/* Card Styling */
+/* Card Styling */
+.card {
+  /* background: #041c3a; */
+  background: #dcd8d8;
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out, border-radius 0.5s ease-in-out;
+  cursor: pointer;
+  color: #000;
+  border: 3px solid transparent;
+  position: relative;
+}
+
+/* Border Animation */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 15px;
+  background: linear-gradient(45deg, #ff6b6b, #4facfe, #ff6b6b);
+  background-size: 300% 300%;
+  z-index: -1;
+  animation: glowing-border 2s infinite linear;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+@keyframes glowing-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Hover Effects */
+.card:hover {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  border-radius: 25px;
+}
+
+/* Icon Container */
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Animated Icon */
+.icon {
+  color: #ff6b6b;
+  animation: bounce 1.5s infinite;
+}
+/* Animations */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Card Title */
+.cardTitle {
+  font-size: 3.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.description {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cardWrapper {
+    max-width: 90%;
+  }
+
+  .card {
+    padding: 15px;
+    height: 40vh;
+    width: 100%;
+  }
+
+  .cardTitle {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+  }
+  .description {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 468px) {
+  .card {
+    height: auto;
+  }
+}
