@@ -1,33 +1,41 @@
 
 import React from "react";
 import "./IconsStyle.css";
+import MS from "../../assets/sm.png"
+import S from "../../assets/budweiser.png"
+import D from "../../assets/buzzfeed.png"
+import E from "../../assets/forbes.png"
+import F from "../../assets/macys.png"
+import G from "../../assets/menshealth.png"
+import H from "../../assets/mrbeast.png"
+
 const LogoSlider = () => {
   return (
     <div>
       <div className="wrapper">
         <div className="item item1">
-          <img src="src/assets/3m.svg" alt="3M" />
+          <img src={MS} alt="3M" />
         </div>
         <div className="item item2">
-          <img src="src/assets/budweiser.svg" alt="Budweiser" />
+          <img src={S} alt="Budweiser" />
         </div>
         <div className="item item3">
-          <img src="src/assets/budweiser.svg" alt="Budweiser" />
+          <img src={S} alt="Budweiser" />
         </div>
         <div className="item item4">
-          <img src="src/assets/buzzfeed.svg" alt="Buzzfeed" />
+          <img src={D} alt="Buzzfeed" />
         </div>
         <div className="item item5">
-          <img src="src/assets/forbes.svg" alt="Forbes" />
+          <img src={E} alt="Forbes" />
         </div>
         <div className="item item6">
-          <img src="src/assets/macys.svg" alt="Macy's" />
+          <img src={F} alt="Macy's" />
         </div>
         <div className="item item7">
-          <img src="src/assets/menshealth.svg" alt="Men's Health" />
+          <img src={G} alt="Men's Health" />
         </div>
         <div className="item item8">
-          <img src="src/assets/mrbeast.svg" alt="MrBeast" />
+          <img src={H} alt="MrBeast" />
         </div>
       </div>
     </div>
