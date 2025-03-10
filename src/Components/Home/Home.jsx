@@ -8,6 +8,7 @@ import BrandsIcon from "../common/BrandsIcon";
 import Contact from "../Info/collegeplacInfo";
 import Placerr from "../Layout/Placer";
 import { useNavigate } from "react-router-dom";
+import DU from "../../assets/du.png"
 
 
 const HeroSection = () => {
@@ -45,7 +46,7 @@ const HeroSection = () => {
 
       <section className={`container ${styles.featuresSection}`}>
         <div className={styles.feature}>
-          <img src="src/assets/du.png" alt="logo" />
+          <img src={DU} alt="logo" />
         </div>
         <p className={styles.featuredet}></p>
       </section>
