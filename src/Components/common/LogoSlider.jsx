@@ -1,7 +1,7 @@
 
 import React from "react";
 import "./IconsStyle.css";
-import MS from "../../assets/sm.png"
+import MS from "../../assets/3m.png"
 import S from "../../assets/budweiser.png"
 import D from "../../assets/buzzfeed.png"
 import E from "../../assets/forbes.png"
