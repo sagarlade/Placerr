@@ -4,7 +4,7 @@ import LogoSlider from "../common/LogoSlider";
 import Card from "../common/Cards";
 import Timeline from "../Timelines/Timeline";
 import NewsletterSubscribe from "../News/Newsletter";
-import BrandsIcon from "../common/Brandsicon";
+import BrandsIcon from "../common/BrandsIcon";
 import Contact from "../Info/collegeplacInfo";
 import Placerr from "../Layout/Placer";
 import { useNavigate } from "react-router-dom";
