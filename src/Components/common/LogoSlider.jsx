@@ -1,7 +1,6 @@
 
 import React from "react";
 import "./IconsStyle.css";
-import MS from "../../assets/3m.png"
 import S from "../../assets/budweiser.png"
 import D from "../../assets/buzzfeed.png"
 import E from "../../assets/forbes.png"
@@ -14,7 +13,7 @@ const LogoSlider = () => {
     <div>
       <div className="wrapper">
         <div className="item item1">
-          <img src={MS} alt="3M" />
+          <img src={S} alt="3M" />
         </div>
         <div className="item item2">
           <img src={S} alt="Budweiser" />
